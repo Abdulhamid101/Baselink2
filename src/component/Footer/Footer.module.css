@@ -1,4 +1,5 @@
 .site_footer {
+  font-family: "Inknut Antiqua", serif;
   background: #08223a;
   color: #e8f1ff;
   font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
@@ -29,9 +30,10 @@
   object-fit: contain;
 }
 .brand_text {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 1.2;
-  font-weight: 700;
 }
 .links,
 .contact {
@@ -40,6 +42,7 @@
 }
 .links h4,
 .contact h4 {
+  font-weight: 700;
   margin: 4px 0 10px;
   font-size: 18px;
 }

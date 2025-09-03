@@ -8,11 +8,15 @@
   position: relative;
 }
 .courses_head h2 {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   margin: 0 0 6px;
   font-size: 32px;
   font-weight: 800;
 }
 .courses_head p {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   color: #c9d6e8;
   font-size: 15px;
@@ -47,6 +51,7 @@
 }
 
 .course_card h3 {
+  font-family: "Inria Sans", sans-serif;
   margin: 1.5rem 0 10px;
   margin-bottom: 2rem;
   font-size: 18px;
@@ -54,6 +59,7 @@
   color: #0b1420;
 }
 .course_card ul {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding-left: 18px;
   color: #6a788a;
@@ -88,6 +94,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
+  .courses{
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -121,11 +130,17 @@
     width: 20px;
     height: 20px;
   }
+  .courses{
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width: 360px) {
   .course_grid {
     gap: 12px;
-    padding: 0 12px;
+    padding: 0 30px;
+  }
+  .courses{
+    margin-bottom: 3rem;
   }
 }

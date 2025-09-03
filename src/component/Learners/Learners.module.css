@@ -8,12 +8,15 @@
   text-align: center;
 }
 .header h1 {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
   margin: 0 0 6px;
   font-size: clamp(24px, 3.2vw, 30px);
   font-weight: 800;
   color: #0b1420;
 }
 .header p {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   color: #67788a;
 }
@@ -24,6 +27,7 @@
   margin-top: clamp(20px, 3vw, 28px);
 }
 .t_card {
+   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   border: 1px solid #e8edf4;
   border-radius: 12px;
