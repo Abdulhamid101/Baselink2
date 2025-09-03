@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import image2 from "../../assets/Heroimg.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -18,8 +19,8 @@ export default function Hero() {
           </p>
 
           <div className={styles.cta}>
-            <a className={styles.btn_outline} href="#">Browse courses</a>
-            <a className={styles.btn_primary} href="#">Sign up</a>
+            <Link className={styles.btn_outline} to ="/">Browse courses</Link>
+            <Link className={styles.btn_primary} to="/signup">Sign up</Link>
           </div>
         </div>
 
