@@ -334,12 +334,91 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 640px) {
-  .main {
-    padding: 20px;
+@media (max-width: 1024px) {
+  .main { padding: 22px; }
+  :global(.page) { padding: 1.5rem; }
+}
+
+@media (max-width: 900px) {
+  /* Stack layout: sidebar becomes top bar */
+  .shell { flex-direction: column; }
+
+  .sidebar {
+    width: 100%;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line-strong);
+    position: sticky;
+    top: 0;
+    background: #fff;          /* give it a surface so it looks like a topbar */
+    z-index: 10;
   }
+
+  .brand {
+    margin-bottom: 10px;
+  }
+
+  /* Turn vertical nav into horizontal, scrollable pills */
+  .nav {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+  .nav::-webkit-scrollbar { height: 6px; }
+  .nav::-webkit-scrollbar-thumb { background: var(--pill-border); border-radius: 999px; }
+
+  .bottom {
+    /* Put Q&A + Logout inline with the nav on mobile */
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main {
+    padding: 18px;
+    border-radius: 0; /* flush with edges under the topbar */
+  }
+
+  :global(.page) {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  :global(.grid2) {
+    grid-template-columns: 1fr; /* already in your CSS but keeping here for clarity */
+  }
+
   :global(.table th),
   :global(.table td) {
-    padding: 8px 10px;
+    padding: 10px;
+    white-space: nowrap; /* prevent headers from wrapping awkwardly */
   }
+
+  /* Shrink heading/subtitle a touch */
+  :global(.page h1) { font-size: 20px; }
+  :global(.page p)  { font-size: 13px; }
 }
+
+@media (max-width: 640px) {
+  .main { padding: 14px; }
+  :global(.page) { padding: 0.75rem; }
+
+  /* Smaller pill tabs */
+  :global(.tab) { padding: 6px 12px; font-size: 13px; }
+
+  /* Buttons */
+  :global(.btn) { padding: 8px 10px; font-size: 13px; }
+
+  /* Tables tighter at phone width */
+  :global(.table th),
+  :global(.table td) { padding: 8px 10px; }
+}
+
+/* ====== Helpful global fix ====== */
+:global(*),
+:global(*::before),
+:global(*::after) { box-sizing: border-box; }
