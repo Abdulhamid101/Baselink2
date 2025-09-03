@@ -1,0 +1,36 @@
+.Ready_secction{
+    margin: 4rem;
+}
+
+.main_txt{
+    text-align: center;
+}
+
+.main_txt h1{
+    font-size: 38px;
+}
+
+.main_txt p{
+    font-size: 20px;
+}
+
+.btn{
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+}
+
+.btn button{
+    padding: 1rem 3.5rem;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    /* font-size: 32px; */
+}
+
+.btn button:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid #007BFF;
+}

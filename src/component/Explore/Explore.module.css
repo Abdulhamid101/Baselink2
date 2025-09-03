@@ -1,0 +1,131 @@
+.courses_head {
+  background: #021f3d;
+  color: #fff;
+  text-align: center;
+  padding: 32px 16px 84px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.courses_head h2 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 800;
+}
+.courses_head p {
+  margin: 0;
+  color: #c9d6e8;
+  font-size: 15px;
+}
+
+.course_grid {
+  font-size: 20px;
+  max-width: 1200px;
+  margin: -56px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.course_card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 28px 18px 22px;
+  box-shadow: 0 6px 18px rgba(10, 30, 60, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  min-height: 190px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(10, 30, 60, 0.12);
+}
+
+.course_card h3 {
+  margin: 1.5rem 0 10px;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b1420;
+}
+.course_card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #6a788a;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.course_card .tab {
+  width: 54px;
+  height: 44px;
+  background: #f3f7ff;
+  border-radius: 10px 10px 6px 6px;
+  border: 1px solid #d7e3ff;
+  display: grid;
+  place-items: center;
+  color: #1f67ff;
+  box-shadow: 0 6px 12px rgba(31, 103, 255, 0.15);
+  margin: 0 auto;
+}
+.course_card .tab svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 1024px) {
+  .courses_head {
+    padding: 28px 16px 78px;
+  }
+  .course_grid {
+    max-width: 900px;
+    margin: -52px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .courses_head h2 {
+    font-size: 26px;
+  }
+  .courses_head p {
+    font-size: 14px;
+  }
+  .course_grid {
+    max-width: 640px;
+    margin: -48px auto 0;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 0 14px;
+  }
+  .course_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 157px;
+    min-height: 202px;
+  }
+  .tab {
+    top: -18px;
+    width: 50px;
+    height: 40px;
+  }
+  .tab svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .course_grid {
+    gap: 12px;
+    padding: 0 12px;
+  }
+}

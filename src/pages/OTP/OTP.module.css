@@ -1,0 +1,147 @@
+.auth {
+  max-width: 1100px;
+  margin: 24px auto;
+  background: #fff;
+  border: 1px solid #e6eef7;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  min-height: 640px;
+}
+.rail {
+  background: #f3f7ff;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 24px;
+}
+.steps li {
+  margin: 12px 0;
+  color: #6b7a90;
+}
+.done {
+  color: #1f7a47;
+  font-weight: 600;
+}
+.active {
+  color: #0b66ff;
+  font-weight: 700;
+}
+.wave {
+  margin-top: auto;
+  height: 120px;
+  background: linear-gradient(180deg, #e2edff, transparent);
+  border-radius: 16px;
+}
+.back {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  color: #0b66ff;
+  cursor: pointer;
+  text-align: left;
+}
+.panel {
+  padding: 64px 72px;
+}
+.title {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+.helper {
+  color: #55607a;
+  margin: 0 0 20px;
+}
+.inlineLink {
+  background: none;
+  border: none;
+  color: #0b66ff;
+  cursor: pointer;
+  padding: 0 6px;
+}
+.form {
+  max-width: 420px;
+}
+.form label {
+  display: block;
+  margin-bottom: 14px;
+}
+.form span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #2f3a4a;
+}
+.form input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #c9d4e5;
+  border-radius: 8px;
+  padding: 0 12px;
+  outline: none;
+}
+.form input:focus {
+  border-color: #0b66ff;
+}
+.primary {
+  margin-top: 16px;
+  height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 10px;
+  background: #0b66ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.error {
+  color: #c62828;
+  margin: 8px 0;
+}
+.info {
+  color: #20663a;
+  margin: 8px 0;
+}
+.resendRow {
+  margin-top: 8px;
+  color: #6b7a90;
+}
+.progress {
+  display: flex;
+  gap: 6px;
+  margin-top: 24px;
+}
+.progress span {
+  height: 4px;
+  width: 64px;
+  background: #e6eaf2;
+  border-radius: 6px;
+}
+.barDone {
+  background: #1f7a47;
+}
+.barActive {
+  background: #0b66ff;
+}
+@media (max-width: 900px) {
+  .auth {
+    grid-template-columns: 1fr;
+  }
+  .rail {
+    display: none;
+  }
+  .panel {
+    padding: 32px 20px;
+  }
+}

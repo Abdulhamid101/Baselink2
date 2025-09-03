@@ -1,0 +1,155 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  margin: 0 1rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.brand img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.brandText {
+  color: #0b1420;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  text-decoration: none;
+  color: #131313;
+  font-size: 16px;
+}
+.menu a:hover {
+  color: #494949;
+}
+
+.actions {
+  margin-left: 12px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1e66ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.burger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.burger span {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: #222;
+  transition: 0.2s ease;
+  border-radius: 2px;
+}
+.burger span:nth-child(1) {
+  top: 11px;
+}
+.burger span:nth-child(2) {
+  top: 17px;
+}
+.burger span:nth-child(3) {
+  top: 23px;
+}
+.burger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+.scrim {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.ctaMobile{
+  display: none;
+}
+@media (max-width: 900px) {
+  .nav {
+    padding: 14px 18px;
+  }
+  .actions {
+    display: none;
+  }
+  .burger {
+    display: block;
+  } 
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: min(78vw, 340px);
+    background: #ffffff;
+    box-shadow: -12px 0 30px rgba(0, 0, 0, 0.12);
+    padding: 84px 20px 20px;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+  }
+  .menu.show {
+    transform: translateX(0);
+  }
+  .menu a {
+    font-size: 17px;
+  }
+
+  .ctaMobile {
+    display: block;
+    margin-top: 8px;
+  }
+  .ctaMobile .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .scrim.show {
+    display: block;
+  }
+}
